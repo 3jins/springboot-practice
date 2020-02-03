@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.1.4.RELEASE'
+    id 'org.springframework.boot' version '2.2.0.RELEASE'
     id 'java'
 }
 
@@ -15,5 +15,17 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // util
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    annotationProcessor 'org.projectlombok:lombok'
+    compile group: 'org.modelmapper', name: 'modelmapper', version: '2.3.6'
+
+    // database
+    runtimeOnly 'mysql:mysql-connector-java'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
