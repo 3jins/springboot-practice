@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: local
+
+---
+
+spring:
+  profiles: local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_practice?serverTimezone=UTC
+    username: spr-prac
+    password: 1234  # TODO: Conceal password
+    schema: classpath:/schema.sql
+    data: classpath:/data.sql
+    initialization-mode: always
+  jpa:
+    properties:
+      hibernate:
+        id:
+          new_generator_mappings: false

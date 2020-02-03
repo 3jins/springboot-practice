@@ -1,8 +1,8 @@
 import React from 'react';
-import DataList from './DataList';
+import CatList from './CatList';
 
 export default () => (
   <div className="app">
-    <DataList />
+    <CatList />
   </div>
 );
