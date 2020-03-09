@@ -1,7 +1,6 @@
 package com.sejin.springbootpractice.service;
 
-import com.sejin.springbootpractice.dto.req.CatRequestDto;
-import com.sejin.springbootpractice.dto.res.CatResponseDto;
+import com.sejin.springbootpractice.dto.param.CatRequestDto;
 import com.sejin.springbootpractice.model.Cat;
 import com.sejin.springbootpractice.repository.CatRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +19,7 @@ public class CatService {
         this.catRepository = catRepository;
     }
 
-    public List<Cat> getCatList(CatRequestDto catRequestDto) {
+    public List<Cat> getCatList(final CatRequestDto catRequestDto) {
         if (catRequestDto.getKind() != null) {
             return catRepository.findByKind(catRequestDto.getKind());
         }
