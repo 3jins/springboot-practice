@@ -1,12 +1,10 @@
 package com.sejin.springbootpractice.service;
 
-import com.sejin.springbootpractice.dto.req.CatRequestDto;
+import com.sejin.springbootpractice.dto.param.CatRequestDto;
 import com.sejin.springbootpractice.model.Cat;
 import com.sejin.springbootpractice.repository.CatRepository;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.mock.mockito.SpyBean;
@@ -17,7 +15,6 @@ import static org.mockito.BDDMockito.given;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

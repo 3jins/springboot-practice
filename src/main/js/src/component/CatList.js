@@ -24,7 +24,7 @@ export default () => {
       <div key={cat.catIdx}>
         <p>{cat.name}</p>
         <p>{cat.kind}</p>
-        <p>{cat.age}</p>
+        <p>{cat.birth}</p>
         <p>{cat.furColor}</p>
       </div>
     ));

@@ -26,7 +26,7 @@ CREATE TABLE `cat` (
   `cat_idx` bigint AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `kind` varchar(45) NOT NULL,
-  `age` int NOT NULL,
+  `birth` DATE NOT NULL,
   `fur_color` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_idx`),
   UNIQUE KEY `cat_idx_UNIQUE` (`cat_idx`)
