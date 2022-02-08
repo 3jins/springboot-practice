@@ -3,21 +3,19 @@ package com.sejin.springbootpractice.model;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 @Getter
+@Setter
 @Entity
 public class Cat {
     @Id
     @GeneratedValue
-    @Column(name = "cat_idx", nullable = false)
-    private Long catIdx;
+    private Long id;
 
     private String name;
 
@@ -29,4 +27,7 @@ public class Cat {
 
     @Column(name = "fur_color", nullable = false)
     private String furColor;
+
+    @ManyToOne
+    private Butler butler;
 }

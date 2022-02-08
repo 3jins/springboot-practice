@@ -19,3 +19,4 @@ spring:
       hibernate:
         id:
           new_generator_mappings: false
+        show-sql: true
