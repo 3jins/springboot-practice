@@ -20,22 +20,25 @@
 --
 
 DROP TABLE IF EXISTS `cat`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cat` (
-  `cat_idx` bigint AUTO_INCREMENT,
+  `cat_id` bigint AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `kind` varchar(45) NOT NULL,
-  `birth` DATE NOT NULL,
+  `birth` DATETIME NOT NULL,
   `fur_color` varchar(45) NOT NULL,
-  PRIMARY KEY (`cat_idx`),
-  UNIQUE KEY `cat_idx_UNIQUE` (`cat_idx`)
+  `butler_id` bigint,
+  PRIMARY KEY (`cat_id`),
+  UNIQUE KEY `cat_id_UNIQUE` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `cat`
---
+DROP TABLE IF EXISTS `butler`;
+CREATE TABLE `butler` (
+    `butler_id` bigint AUTO_INCREMENT,
+    `name` varchar(45) DEFAULT NULL,
+    PRIMARY KEY (`butler_id`),
+    UNIQUE KEY `butler_id_UNIQUE` (`butler_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 LOCK TABLES `cat` WRITE;
 /*!40000 ALTER TABLE `cat` DISABLE KEYS */;
